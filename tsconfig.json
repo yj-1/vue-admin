@@ -1,0 +1,26 @@
+{
+  "env":{
+    "ndoe": true,
+    "commonjs": true
+  },
+  "compilerOptions": {
+    "module":"commonjs", // 输出后的文件类型commonjs和es
+    "esModuleInterop": true, // 是否允许使用备用模块导入语法 import
+    "target": "ESNext", // es6语法版本
+    "noImplicitAny": false, // 更严格模式
+    "sourceMap": true, // 将源码映射和js一起输出
+    // "lib": [
+    //   "ESNext"
+    // ],
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true, 
+    "moduleResolution":"Node", // 解析策略
+    "baseUrl": ".", // 基本路径，需要使用paths必须配置
+    "paths": { // 路径别名
+      "c/*":["config/*"],
+      "r/*":["router/*"],
+      "u/*":["utils/*"],
+    }
+  },
+  "exclude": ["./node_modules/**/*"]
+}
